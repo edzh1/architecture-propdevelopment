@@ -1,0 +1,132 @@
+<mxfile host="app.diagrams.net" version="26.2.13">
+  <diagram name="System-Architecture" id="PropDev-C4-Context">
+    <mxGraphModel dx="6000" dy="3000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- System boundary -->
+        <mxCell id="system-boundary" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="-400" y="1600" width="750" height="570" as="geometry" />
+        </mxCell>
+        
+        <!-- External systems -->
+        <object placeholders="1" c4Name="Ресурсоснабжающие организации" c4Type="Software System" c4Description="" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;" id="utility-providers">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;fontColor=#ffffff;strokeColor=#736782;" parent="1" vertex="1">
+            <mxGeometry x="2200" y="450" width="260" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <object placeholders="1" c4Name="Процессинговый центр" c4Type="Software System" c4Description="Обработка онлайн-платежей" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="payment-system">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;fontColor=#ffffff;strokeColor=#736782;" parent="1" vertex="1">
+            <mxGeometry x="2100" y="650" width="260" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <!-- Internal containers -->
+        <object placeholders="1" c4Name="База клиентов CRM" c4Type="Container" c4Technology="MS SQL Server" c4Description="Хранилище данных CRM-системы" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="crm-database">
+          <mxCell style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;strokeColor=#0E7DAD;" parent="1" vertex="1">
+            <mxGeometry x="350" y="1080" width="260" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <object placeholders="1" c4Name="CRM для клиентов" c4Type="Container" c4Technology="SpringBoot, ElasticSearch, Dynamics CRM" c4Description="Управление клиентской базой" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="crm-app">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;strokeColor=#0E7DAD;" parent="1" vertex="1">
+            <mxGeometry x="350" y="920" width="260" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <object placeholders="1" c4Name="Веб-портал продаж" c4Type="Container" c4Technology="React, JavaScript" c4Description="Портал для выбора и резервирования недвижимости" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="sales-portal">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;strokeColor=#0E7DAD;" parent="1" vertex="1">
+            <mxGeometry x="350" y="400" width="260" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <object placeholders="1" c4Name="Мобильное приложение собственников" c4Type="Container" c4Technology="iOS, Android" c4Description="Приложения для владельцев недвижимости" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%: %c4Technology%]&lt;/div&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="mobile-app">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#23A2D9;fontColor=#ffffff;strokeColor=#0E7DAD;" parent="1" vertex="1">
+            <mxGeometry x="1420" y="450" width="260" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <!-- People -->
+        <object placeholders="1" c4Name="Покупатель" c4Type="Person" c4Description="Клиент компании" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="customer">
+          <mxCell style="shape=mxgraph.c4.person2;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;" parent="1" vertex="1">
+            <mxGeometry x="380" y="80" width="220" height="200" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <object placeholders="1" c4Name="Владелец" c4Type="Person" c4Description="Собственник недвижимости" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="owner">
+          <mxCell style="shape=mxgraph.c4.person2;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;" parent="1" vertex="1">
+            <mxGeometry x="1450" y="60" width="220" height="200" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <object placeholders="1" c4Name="Менеджер по продажам" c4Type="Person" c4Description="Работает с клиентами и недвижимостью" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;&lt;div&gt;%c4Description%&lt;/div&gt;" id="manager">
+          <mxCell style="shape=mxgraph.c4.person2;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;" parent="1" vertex="1">
+            <mxGeometry x="-900" y="820" width="220" height="200" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <!-- External integrations -->
+        <object placeholders="1" c4Name="IoT устройства" c4Type="Software System" c4Description="" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;" id="iot-devices">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;fontColor=#ffffff;strokeColor=#736782;" parent="1" vertex="1">
+            <mxGeometry x="1860" y="90" width="260" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <object placeholders="1" c4Name="Платформа &quot;Умный дом&quot;" c4Type="Software System" c4Description="" label="&lt;b&gt;%c4Name%&lt;/b&gt;&lt;div&gt;[%c4Type%]&lt;/div&gt;" id="smart-home">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8C8496;fontColor=#ffffff;strokeColor=#736782;" parent="1" vertex="1">
+            <mxGeometry x="2210" y="90" width="260" height="130" as="geometry" />
+          </mxCell>
+        </object>
+        
+        <!-- Connections -->
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="customer" target="sales-portal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="owner" target="mobile-app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="manager" target="crm-app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="owner" target="iot-devices">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="iot-devices" target="smart-home">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Security components -->
+        <mxCell id="firewall1" value="" style="image;html=1;image=img/lib/clip_art/networking/Firewall_02_128x128.png" parent="1" vertex="1">
+          <mxGeometry x="430" y="280" width="90" height="90" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="firewall2" value="" style="image;html=1;image=img/lib/clip_art/networking/Firewall_02_128x128.png" parent="1" vertex="1">
+          <mxGeometry x="1500" y="280" width="90" height="90" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="fw-label1" value="Межсетевой экран" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="305" width="70" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="fw-label2" value="Межсетевой экран" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1590" y="305" width="70" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Group labels -->
+        <mxCell id="group1" value="&lt;b&gt;Клиентские сервисы&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="700" y="380" width="120" height="120" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="group2" value="&lt;b&gt;Сервисы ЖКХ&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1760" y="430" width="100" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,105 @@
+<mxfile host="app.diagrams.net" version="26.2.13">
+  <diagram id="RiskAnalysis-InfoSec" name="Risk-Matrix">
+    <mxGraphModel dx="2200" dy="2100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Central node -->
+        <mxCell id="central-node" value="Информационная безопасность" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="1400" y="350" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Data categories -->
+        <mxCell id="public-data" value="Открытые данные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="20" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="internal-data" value="Служебные данные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="250" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="confidential-data" value="Конфиденциальные сведения" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="450" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="secret-data" value="Строго конфиденциальные данные" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="700" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Connections -->
+        <mxCell id="conn1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;endArrow=none;" edge="1" parent="1" source="central-node" target="public-data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="conn2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;endArrow=none;" edge="1" parent="1" source="central-node" target="internal-data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="conn3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;endArrow=none;" edge="1" parent="1" source="central-node" target="confidential-data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="conn4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;endArrow=none;" edge="1" parent="1" source="central-node" target="secret-data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Risk categories -->
+        <mxCell id="risk1" value="Несанкционированное раскрытие" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="150" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="risk2" value="Уничтожение информации" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="300" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="risk3" value="Модификация данных" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="450" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="risk4" value="Снижение качества" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="600" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="risk5" value="Устаревание информации" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="750" width="140" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend-low" value="Низкий риск" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="920" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-medium" value="Средний риск" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="970" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="legend-high" value="Высокий риск" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1020" width="150" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend lines -->
+        <mxCell id="line-low" value="" style="endArrow=none;html=1;rounded=0;fillColor=#60a917;strokeColor=#2D7600;strokeWidth=6;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="935" as="sourcePoint" />
+            <mxPoint x="170" y="935" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="line-medium" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=6;fillColor=#6a00ff;strokeColor=#3700CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="985" as="sourcePoint" />
+            <mxPoint x="170" y="985" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="line-high" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=6;fillColor=#a20025;strokeColor=#6F0000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="1035" as="sourcePoint" />
+            <mxPoint x="170" y="1035" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
